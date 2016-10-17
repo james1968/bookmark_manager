@@ -1,4 +1,5 @@
 require 'spec_helper'
+require './app/models/link'
 
 feature 'view links' do
   scenario 'display list of links' do
