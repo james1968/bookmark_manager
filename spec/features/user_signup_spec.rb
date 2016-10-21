@@ -4,8 +4,8 @@ feature 'User sign in' do
 
   scenario 'I can sign up as a new user' do
     expect { sign_up }.to change(User, :count).by(1)
-    expect(page).to have_content('Hello michal@gmail.com')
-    expect(User.first.email).to eq('michal@gmail.com')
+    expect(page).to have_content('Hello alice@example.com')
+    expect(User.first.email).to eq('alice@example.com')
   end
 
   def sign_in_fail

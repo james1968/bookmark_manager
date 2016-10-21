@@ -8,7 +8,10 @@ require './app/models/link'
 require './app/models/tag'
 require './app/models/user'
 require 'data_mapper'
-require 'features/web_helper'
+require_relative 'features/helpers/session'
+RSpec.configure do |config|
+  config.include SessionHelpers
+end
 
 
 Capybara.app = BookmarkManager
